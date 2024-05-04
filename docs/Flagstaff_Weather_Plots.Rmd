@@ -1,0 +1,24 @@
+---
+title: "Flagstaff_Weather_Plots"
+output: pdf_document
+date: "2024-05-02"
+---
+
+```{r}
+library(RyanFlagWeather)
+ggplot(Flagstaff_Weather, aes(x=DATE, y=PRCP))+
+  geom_line()
+```
+```{r, warning=FALSE}
+ggplot(Flagstaff_Weather, aes(x=DATE, y=SNOW))+
+  geom_line()
+```
+```{r}
+ggplot(Flagstaff_Weather, aes(x=DATE, y=TMAX))+
+  geom_line()
+```
+```{r}
+ggplot(Flagstaff_Weather, aes(x=DATE, y=TMIN))+
+  geom_line()
+```
+
